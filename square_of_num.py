@@ -1,3 +1,8 @@
-num = int(input("Enter a number: "))
-square = num * num
-print("Square of the number is:", square)
+import sys
+
+if len(sys.argv) != 2:
+    print("Usage: python square_of_num.py <number>")
+    sys.exit(1)
+
+num = int(sys.argv[1])
+print("Square of", num, "is", num * num)
